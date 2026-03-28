@@ -1,4 +1,4 @@
-package com.interservice.Consumer.restTemplate;
+package com.interservice.Consumer.OpenFeign;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -6,14 +6,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/rest-template")
+@RequestMapping("/api/feign-client")
 @RequiredArgsConstructor
-public class RestTemplateController {
+public class FeignController {
 
-    private final RestTemplateClient restTemplateClient;
+    private final ProviderFeignClient providerFeignClient;
+
     @GetMapping("/instance")
     public String getInstance()
     {
-      return restTemplateClient.getInstanceInfo();
+        return providerFeignClient.getInstanceInfo();
     }
 }

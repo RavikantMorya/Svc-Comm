@@ -16,7 +16,7 @@ public class InstanceController {
 
     @GetMapping("/instance-info")
     public String getInstanceInfo(){
-        System.out.println("Instance served by Port:"+port+" InstanceId:"+instanceId);
+        System.out.println("Request Received at instance running on Port:"+port);
     return "Instance served by Port:"+port+" InstanceId:"+instanceId;
     }
 }

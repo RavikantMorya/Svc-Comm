@@ -6,7 +6,7 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 @RequiredArgsConstructor
-public class RestTemplateClient {
+public class ProviderRestTemplateClient {
 
     private final static String  PROVIDER_URL = "http://localhost:8080";
     private final RestTemplate restTemplate;

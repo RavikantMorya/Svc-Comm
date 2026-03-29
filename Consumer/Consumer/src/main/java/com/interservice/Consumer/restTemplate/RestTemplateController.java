@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class RestTemplateController {
 
-    private final RestTemplateClient restTemplateClient;
+    private final ProviderRestTemplateClient providerRestTemplateClient;
     @GetMapping("/instance")
     public String getInstance()
     {
-      return restTemplateClient.getInstanceInfo();
+      return providerRestTemplateClient.getInstanceInfo();
     }
 }

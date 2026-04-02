@@ -8,4 +8,5 @@ public interface ProviderHttpInterface {
 
     @GetExchange("/instance-info")
     String getInstanceIno();
+
 }
